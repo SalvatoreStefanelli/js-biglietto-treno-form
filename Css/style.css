@@ -1,5 +1,6 @@
 .row {
-    width: 60vw;
+    width: 80vw;
     height: 200px;
+    border-radius: 10px;
 }
 
