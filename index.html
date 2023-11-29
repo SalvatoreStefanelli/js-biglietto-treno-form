@@ -10,23 +10,26 @@
 <body class="bg-danger">
 
     <div class="container-fluid text-white text-center d-flex flex-wrap justify-content-center">
-        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-        <div class="row justify-content-center bg-light m-5">
+        <h1 class="mt-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="row justify-content-center bg-light mt-5">
             <div class="col mt-5">
-                <input type="text" id="fullname" value="Jon Snow">
-                <input type="number" id="chilometers">
-                <input type="number" id="age">
-                <button id="generator"></button>
-                <button id="cancel"></button>
-                
-            
+                <form class="d-flex gap-5 justify-content-center" action="">
+                    <input class="text-center" type="text" id="fullname" placeholder="Nome Cognome">
+                    <input class="text-center" type="number" id="chilometers" placeholder="Km da percorrere">
+                    <input class="text-center" type="number" id="age" placeholder="Fascia d'età">
+                    <button type="submit" id="generator">GENERA</button>
+                    <button type=submit id="cancel">ANNULLA</button>
+                </form>                
+            </div>
         </div>
 
-        <!-- <h1>IL TUO BIGLIETTO</h1> -->
+        <h1 class="mt-3">IL TUO BIGLIETTO</h1>
         <div class="row bg-light">
-            <div class="col">
-
-            </div>
+            <div id="ticket" class="col-4 border-black bg-secondary text-dark">NOME DEL PASSEGGERO</div>
+            <div class="col-2 border-black text-bg-primary text-dark">Offerta</div>
+            <div class="col-2 border-black text-bg-secondary text-dark">Carrozza</div>
+            <div class="col-2 border-black text-bg-danger text-dark">Codice CP</div>
+            <div class="col-2 border-black text-bg-info text-dark">Costo biglietto</div>
         </div>
 
 
