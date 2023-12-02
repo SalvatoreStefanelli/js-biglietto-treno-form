@@ -1,5 +1,5 @@
 // DOM elements
-document.getElementById('fullname');
+const fullname = document.getElementById('fullname');
 const chilometers = document.getElementById('chilometers');
 const age = document.getElementById('age');
 
@@ -12,8 +12,14 @@ const priceKm = 0.21;
 generator.addEventListener('click' , function() {
 //console.log('clicked', chilometers.value , age.value);
 
+const name = fullname.value
+const sale20 = ('SCONTO DEL 20%');
+const sale40 = ('SCONTO DEL 40%');
+const standard = ('BIGLIETTO STANDARD');
 const km = chilometers.value;
 const age_user = age.value;
+const carriage = Math.floor(Math.random() * 10);
+const codeCP = Math.floor(Math.random() * 99999);
 //console.log(km , age_user);
 
 const price = km * priceKm;
@@ -24,7 +30,12 @@ if (age_user < 18) {
 const saleYoung = (price * 20) / 100;
 const priceYoung = price - saleYoung;
 console.log(priceYoung.toFixed(2));
-document.getElementById('ticket').innerHTML = 'IL TUO BIGLIETTO È DI' + ' € ' +  priceYoung.toFixed(2);
+
+document.getElementById('name').innerHTML = name; 
+document.getElementById('sale').innerHTML = sale20;
+document.getElementById('carriage').innerHTML = carriage;
+document.getElementById('codeCP').innerHTML = codeCP;
+document.getElementById('price').innerHTML = ' € ' +  priceYoung.toFixed(2);
 
 
 } else if (age_user > 65) {
@@ -32,13 +43,23 @@ document.getElementById('ticket').innerHTML = 'IL TUO BIGLIETTO È DI' + ' € '
 const saleSenior = (price * 40) / 100;
 const priceSenior = price - saleSenior;
 console.log(priceSenior.toFixed(2));
-document.getElementById('ticket').innerHTML = 'IL TUO BIGLIETTO È DI' + ' € ' + priceSenior.toFixed(2);
+
+document.getElementById('name').innerHTML = name; 
+document.getElementById('sale').innerHTML = sale40;
+document.getElementById('carriage').innerHTML = carriage;
+document.getElementById('codeCP').innerHTML = codeCP;
+document.getElementById('price').innerHTML = ' € ' + priceSenior.toFixed(2);
 
 
 // Calcolo del prezzo del biglietto tra i 18 e i 65 anni
 } else {
 console.log(price.toFixed(2));
-document.getElementById('ticket').innerHTML = 'IL TUO BIGLIETTO È DI' + ' € ' + price.toFixed(2);
+
+document.getElementById('name').innerHTML = name; 
+document.getElementById('sale').innerHTML = standard;
+document.getElementById('carriage').innerHTML = carriage;
+document.getElementById('codeCP').innerHTML = codeCP;
+document.getElementById('price').innerHTML = ' € ' + price.toFixed(2);
 }
 })
 
