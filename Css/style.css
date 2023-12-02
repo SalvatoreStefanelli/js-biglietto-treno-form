@@ -4,4 +4,10 @@
     border-radius: 10px;
 }
 
+#generator:hover,
+#cancel:hover {
+    border-color:orange;
+    color: rgb(104, 104, 244);
+}
+
 

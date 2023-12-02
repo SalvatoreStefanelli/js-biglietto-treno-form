@@ -74,10 +74,3 @@ document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
 })
 
-// add Event Listener
-generator.addEventListener('click' , function() {
-return
-}
-
-
-
