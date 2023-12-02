@@ -17,30 +17,32 @@
                     <input class="text-center" type="text" id="fullname" placeholder="Nome Cognome">
                     <input class="text-center" type="number" id="chilometers" placeholder="Km da percorrere">
                     <input class="text-center" type="number" id="age" placeholder="Fascia d'età">
-                    <button type="submit" id="generator">GENERA</button>
+                    <button type="submit" id="generator" class="border-warning complementary-1-color">GENERA</button>
                     <button type=submit id="cancel">ANNULLA</button>
                 </form>                
             </div>
         </div>
 
-        <h1 class="mt-3">IL TUO BIGLIETTO</h1>
-        <div class="row bg-light">
-            <h5 class="text-success m-0 p-0">DETTAGLIO PASSEGGERI</h5>
-            <div class="section d-flex mt-0 ">
-                <div class="col-4 text-dark">NOME DEL PASSEGGERO
-                    <div id="name"></div>
-                </div>
-                <div class="col-2 text-dark">Offerta
-                    <div id="sale"></div>
-                </div>
-                <div class="col-2 text-dark">Carrozza
-                    <div id="carriage"></div>
-                </div>
-                <div class="col-2 text-dark">Codice CP
-                    <div id="codeCP"></div>
-                </div>
-                <div class="col-2 text-dark">Costo biglietto
-                    <div id="price"></div>
+        <div id="ticket" class="d-none">
+            <h1 class="mt-3">IL TUO BIGLIETTO</h1>
+            <div class="row bg-light">
+                <h3 class="text-success m-0 p-0 fw-bolder">DETTAGLIO PASSEGGERI</h3>
+                <div class="section d-flex mt-0 ">
+                    <div class="col-4 text-dark fw-bolder fs-5">NOME DEL PASSEGGERO
+                        <div id="name" class="fs-6 fw-bold"></div>
+                    </div>
+                    <div class="col-2 text-dark fw-bolder fs-5">Offerta
+                        <div id="sale" class="fs-6 fw-bold"></div>
+                    </div>
+                    <div class="col-2 text-dark fw-bolder fs-5">Carrozza
+                        <div id="carriage" class="fs-6 fw-bold"></div>
+                    </div>
+                    <div class="col-2 text-dark fw-bolder fs-5">Codice CP
+                        <div id="codeCP" class="fs-6 fw-bold"></div>
+                    </div>
+                    <div class="col-2 text-dark fw-bolder fs-5">Costo biglietto
+                        <div id="price" class="fs-6 fw-bold"></div>
+                    </div>
                 </div>
             </div>
         </div>

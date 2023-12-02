@@ -4,6 +4,7 @@ const chilometers = document.getElementById('chilometers');
 const age = document.getElementById('age');
 
 const generator = document.getElementById('generator');
+const cancel = document.getElementById('cancel');
 
 //  costo del biglietto
 const priceKm = 0.21;
@@ -18,8 +19,11 @@ const sale40 = ('SCONTO DEL 40%');
 const standard = ('BIGLIETTO STANDARD');
 const km = chilometers.value;
 const age_user = age.value;
-const carriage = Math.floor(Math.random() * 10);
-const codeCP = Math.floor(Math.random() * 99999);
+const carriage = Math.floor(Math.random() * 8) + 1;
+//const codeCP = Math.floor(Math.random() * 9999) + 10000;
+const codeCP = Math.floor(Math.random() * 89999) + 10000;
+console.log(codeCP);
+
 //console.log(km , age_user);
 
 const price = km * priceKm;
@@ -61,9 +65,19 @@ document.getElementById('carriage').innerHTML = carriage;
 document.getElementById('codeCP').innerHTML = codeCP;
 document.getElementById('price').innerHTML = ' € ' + price.toFixed(2);
 }
+document.getElementById('ticket').classList.remove('d-none');
 })
+
 
 document.querySelector('form').addEventListener('submit', function(e) {
     console.log('form submitted');
     e.preventDefault();
 })
+
+// add Event Listener
+generator.addEventListener('click' , function() {
+return
+}
+
+
+
